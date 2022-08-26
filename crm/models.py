@@ -8,8 +8,8 @@ class HomeMessage(models.Model):
         blank=False
     )
     is_published =  models.BooleanField('Published', default=True)
-    start_date = models.DateField('From', blank=True, null=True)
-    end_date = models.DateField('To', blank=True, null=True)
+    start_date = models.DateField('From', null=True)
+    end_date = models.DateField('To', null=True)
 
     def __str__(self):
         return self.message
