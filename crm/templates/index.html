@@ -5,18 +5,28 @@
 
     <h1>Hello World!</h1>
     <p>Welcome to my first Django project!</p>
-    <div class="alert-box">
-        {% for object in msg_list %}
-        <div class="alert alert-custom alert-dismissible fade show" role="alert">
-            <div>
-                <i class="icon bi bi-bell-fill" style="font-size: 1.5rem;"></i>
-                <span class="home-alert-text fs-6">{{ object.message }}</span>
-            </div>
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+    <p>{{ today }}</p>
+    <p>{{ start }}</p>
+    <p>
+        {% for object in datas %}
+        {{ object.start_date }}
         {% endfor %}
-    </div>
+    </p>
 
+    <p>
+        {% for object in msg_list %}
+        {{ object.message }} <br>
+        {{ object.start_date}} <br>
+        {% endfor %}
+    </p>
+
+    <p>
+        {% for object in msg_list %}
+        {{ object.message }} <br>
+        {{ object.start_date }} <br>
+        {{ object.end_date }} <br>
+        {% endfor %}
+    </p>
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Show Messages on HomePage
 class HomeMessage(models.Model):
